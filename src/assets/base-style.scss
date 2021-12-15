@@ -6,10 +6,11 @@ body {
   margin: 0;
   font-family: 'Roboto';
   font-size: 0.875rem;
-  overflow-x: hidden;
 
   .application {
     min-height: 100vh;
+    overflow: auto;
+    overflow-x: hidden;
 
     &[theme-mode='light'] {
       --error-color: #c62828;
