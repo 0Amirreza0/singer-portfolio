@@ -1,13 +1,13 @@
 <template>
   <div class="portfolio">
-    <timeline-event>
-      <timeline-album class="portfolio__timeline-album"></timeline-album>
+    <timeline-event class="portfolio__event">
+      <timeline-album></timeline-album>
     </timeline-event>
-    <timeline-event>
-      <timeline-album class="portfolio__timeline-album"></timeline-album>
+    <timeline-event class="portfolio__event">
+      <timeline-album></timeline-album>
     </timeline-event>
-    <timeline-event>
-      <timeline-album class="portfolio__timeline-album"></timeline-album>
+    <timeline-event class="portfolio__event">
+      <timeline-album></timeline-album>
     </timeline-event>
   </div>
 </template>
@@ -26,10 +26,12 @@
     $self: &;
 
     margin: 64px;
+    margin-right: 0;
 
-    #{ $self }__timeline-album {
-      height: 100vh;
+    #{ $self }__event {
       width: 100%;
+      min-height: 100vh;
+      padding: 0 24px 24px;
     }
   }
 </style>
