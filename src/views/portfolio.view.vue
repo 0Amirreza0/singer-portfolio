@@ -1,28 +1,23 @@
 <template>
   <div class="portfolio">
     <timeline-event>
-      <div class="portfolio__event">
-        <p>Born In 1998</p>
-      </div>
+      <timeline-album class="portfolio__timeline-album"></timeline-album>
     </timeline-event>
     <timeline-event>
-      <div class="portfolio__event">
-        <p>Born In 1998</p>
-      </div>
+      <timeline-album class="portfolio__timeline-album"></timeline-album>
     </timeline-event>
     <timeline-event>
-      <div class="portfolio__event">
-        <p>Born In 1998</p>
-      </div>
+      <timeline-album class="portfolio__timeline-album"></timeline-album>
     </timeline-event>
   </div>
 </template>
 
 <script>
   import timelineEvent from '@/common/components/timeline-event.component.vue';
+  import timelineAlbum from '@/common/view-components/timeline-album.component.vue';
   export default {
     name: 'portfolio-view',
-    components: { timelineEvent },
+    components: { timelineEvent, timelineAlbum },
   };
 </script>
 
@@ -32,7 +27,9 @@
 
     margin: 64px;
 
-    #{ $self }__event {
+    #{ $self }__timeline-album {
+      height: 100vh;
+      width: 100%;
     }
   }
 </style>
