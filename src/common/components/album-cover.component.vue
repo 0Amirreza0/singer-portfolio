@@ -27,11 +27,11 @@
       width: 100%;
       height: 100%;
       background-color: var(--divider-color);
-      border-radius: 6px;
+      border-radius: 8px;
       overflow: hidden;
       z-index: 1;
       position: relative;
-      box-shadow: 4px 0 12px rgba(0, 0, 0, 0.15);
+      box-shadow: 6px 0 12px -3px rgba(0, 0, 0, 0.25);
 
       img {
         width: 100%;
@@ -46,8 +46,14 @@
       height: calc(100% - #{$spacing});
       position: absolute;
       top: $spacing / 2;
-      left: 60%;
-      transform: rotate(-45deg);
+      transform: translateX(30%) rotate(-90deg);
+      transition: transform 0.25s ease-out;
+    }
+
+    &:hover {
+      #{ $self }__disk {
+        transform: translateX(100%) rotate(0deg);
+      }
     }
   }
 </style>
