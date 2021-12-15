@@ -27,7 +27,7 @@
       background-color: var(--divider-color);
       position: absolute;
       left: -$bullet-width / 2;
-      top: 0;
+      top: $bullet-width;
     }
   }
 </style>
