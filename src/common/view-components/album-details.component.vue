@@ -1,14 +1,23 @@
 <template>
-  <h3 class="album-name">The Underground World</h3>
+  <h3 class="album-name">{{ name }}</h3>
   <p class="caption">
     Release Date:
-    <span class="overline-1 date">2013/05/06</span>
+    <span class="overline-1 date">{{ getReleaseDate }}</span>
   </p>
 </template>
 
 <script>
   export default {
     name: 'album-details',
+    props: {
+      name: String,
+      releaseDate: Number,
+    },
+    computed: {
+      getReleaseDate() {
+        return new Date(this.releaseDate).toDateString();
+      },
+    },
   };
 </script>
 

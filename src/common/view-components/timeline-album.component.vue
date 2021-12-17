@@ -1,8 +1,8 @@
 <template>
-  <h2 class="title">The Beginning</h2>
-  <p>Written the songs while i was at the camp.</p>
+  <h2 class="title">{{ title }}</h2>
+  <p>{{ description }}</p>
   <album-cover class="album-cover"></album-cover>
-  <album-details></album-details>
+  <album-details :name="name" :releaseDate="releaseDate"></album-details>
   <ripple-button class="more" trailing-icon-name="arrow_circle_right">
     More Details
   </ripple-button>
@@ -16,6 +16,13 @@
   export default {
     name: 'timeline-album',
     components: { rippleButton, albumCover, albumDetails },
+    props: {
+      id: String,
+      title: String,
+      description: String,
+      name: String,
+      releaseDate: Number,
+    },
   };
 </script>
 
