@@ -1,6 +1,6 @@
 <template>
   <h3 class="album-name">{{ name }}</h3>
-  <p class="caption">
+  <p class="caption" v-if="releaseDate">
     Release Date:
     <span class="overline-1 date">{{ getReleaseDate }}</span>
   </p>

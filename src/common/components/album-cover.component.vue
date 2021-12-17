@@ -1,8 +1,8 @@
 <template>
   <div class="album-cover">
-    <album-disk class="album-cover__disk"></album-disk>
+    <album-disk :image="image" class="album-cover__disk"></album-disk>
     <div class="album-cover__cover">
-      <img src="http://127.0.0.1:8585/images/mehrdad/cover-1.jpg" />
+      <img :src="image" />
     </div>
   </div>
 </template>
@@ -12,6 +12,12 @@
   export default {
     name: 'album-cover',
     components: { albumDisk },
+    props: {
+      image: {
+        type: String,
+        required: true,
+      },
+    },
   };
 </script>
 

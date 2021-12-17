@@ -2,7 +2,7 @@
   <div class="disk">
     <div class="disk__ring">
       <div class="disk__cover">
-        <img src="http://127.0.0.1:8585/images/mehrdad/cover-1.jpg" />
+        <img :src="image" />
         <div class="disk__hole"></div>
       </div>
     </div>
@@ -12,6 +12,12 @@
 <script>
   export default {
     name: 'album-disk',
+    props: {
+      image: {
+        type: String,
+        required: true,
+      },
+    },
   };
 </script>
 
