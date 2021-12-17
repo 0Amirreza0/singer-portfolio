@@ -1,7 +1,7 @@
 <template>
   <h2 class="title">{{ title }}</h2>
   <p>{{ description }}</p>
-  <album-cover class="album-cover"></album-cover>
+  <album-cover v-if="image" :image="image" class="album-cover"></album-cover>
   <album-details :name="name" :releaseDate="releaseDate"></album-details>
   <ripple-button class="more" trailing-icon-name="arrow_circle_right">
     More Details
@@ -22,6 +22,7 @@
       description: String,
       name: String,
       releaseDate: Number,
+      image: String,
     },
   };
 </script>

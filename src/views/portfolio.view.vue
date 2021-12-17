@@ -1,5 +1,8 @@
 <template>
   <div class="portfolio">
+    <timeline-event class="portfolio__event">
+      <timeline-profile></timeline-profile>
+    </timeline-event>
     <timeline-event
       v-for="album in albumMap"
       :key="album.id"
@@ -13,9 +16,11 @@
 <script>
   import timelineEvent from '@/common/components/timeline-event.component.vue';
   import timelineAlbum from '@/common/view-components/timeline-album.component.vue';
+  import timelineProfile from '@/common/view-components/timeline-profile.component.vue';
+
   export default {
     name: 'portfolio-view',
-    components: { timelineEvent, timelineAlbum },
+    components: { timelineEvent, timelineAlbum, timelineProfile },
     computed: {
       albumMap() {
         return {
@@ -25,6 +30,7 @@
             name: 'The Underground World',
             description: 'Written the songs while i was at the camp.',
             releaseDate: 1639776765968,
+            image: 'http://127.0.0.1:8585/images/mehrdad/cover-1.jpg',
           },
         };
       },
